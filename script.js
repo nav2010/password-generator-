@@ -94,6 +94,9 @@ var Result=[];
 function getPasswordOptions() {
 
   var passwordLength = prompt("How many characters would you like in the password?");
+  if(passwordLength < 8 && passwordLength > 64) {
+    return "Invalid Password length"
+  }else{
   var upperCase = confirm("Are Uppercase letters allowed?");
   var lowerCase = confirm("Are Lowercase letters allowed?");
   var Numeric = confirm("Are Numeric characters allowed?");
@@ -107,7 +110,7 @@ function getPasswordOptions() {
 
       - What can we use to display a message to the user in the browser if they input incorrect content ? 
   */
-
+  }
   //  where should this function be called within the file?
   var dataUser = {
     passwordLength:passwordLength,
@@ -142,11 +145,6 @@ function generatePassword() {
   //lowercase, uppercase, special char,number
   //validate input charactor between 10 and 64 one charactor type is bring selected
   // display generate password on display
-  if(passwordLength >= 8 && passwordLength < 64) {
-    
-  } else {
-   
-  }
 
   var passwordOptions=getPasswordOptions();
  //console.log(passwordOptions);
