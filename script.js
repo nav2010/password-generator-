@@ -124,6 +124,13 @@ return dataUser;
 // Function for getting a random element from an array
 function getRandom(arr) {
 
+   // accepts an array as input
+  // how can we generate random numbers and use them to grab content from the arrays ?
+  //  where should this function be called within the file?
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  var randomCharacter = arr[randomIndex];
+  return randomCharacter;
+
 }
 
 // Function to generate password with user input
