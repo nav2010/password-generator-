@@ -96,6 +96,28 @@ function getPasswordOptions() {
   var lowerCase = confirm("Are Lowercase letters allowed?");
   var Numeric = confirm("Are Numeric characters allowed?");
   var special = confirm("Are special characters allowed?");
+   /*Other Requirements:
+    - code should validate for each input: 
+        - Many times users will try to input incorrect input to try and break the app. What if a user inserts 
+          a letter instead of a number when we ask for password length? How can we check to see that the correct 
+          data type (a number) was inserted? 
+      
+
+      - What can we use to display a message to the user in the browser if they input incorrect content ? 
+  */
+
+  //  where should this function be called within the file?
+  var dataUser = {
+    passwordLength:passwordLength,
+    upperCase:upperCase,
+    lowerCase:lowerCase,
+    Numeric:Numeric,
+    special:special
+
+  }
+
+return dataUser;
+
 
 }
 
