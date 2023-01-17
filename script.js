@@ -87,6 +87,8 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
+var posCar=[];  // empty array for poss ca
+var Result=[];
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -135,6 +137,41 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+
+  //passwordLength 10 < 64
+  //lowercase, uppercase, special char,number
+  //validate input charactor between 10 and 64 one charactor type is bring selected
+  // display generate password on display
+  if(passwordLength >= 8 && passwordLength < 64) {
+    
+  } else {
+   
+  }
+
+  var passwordOptions=getPasswordOptions();
+ //console.log(passwordOptions);
+ if(passwordOptions.lowerCase){
+     posCar=posCar.concat(lowerCasedCharacters);
+ }
+ if(passwordOptions.upperCase){
+  posCar=posCar.concat(upperCasedCharacters);
+}
+if(passwordOptions.Numeric){
+  posCar=posCar.concat(numericCharacters);
+}
+if(passwordOptions.special){
+  posCar=posCar.concat(specialCharacters);
+}
+console.log(posCar);
+
+for (let index = 0; index < passwordOptions.passwordLength; index++) {
+  var charactor = getRandom(posCar);
+ Result.push(charactor);
+  console.log(charactor);
+
+}
+return Result.join("");
+
 
 }
 
