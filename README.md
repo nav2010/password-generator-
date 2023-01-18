@@ -1,14 +1,12 @@
 # password-generator-
+
 # Generate a password when the button is clicked
 
 # Present a series of prompts for password criteria
 
 ## Length of password
 
- At least 10 characters but no more than 64.
-
-
-# Character types
+## Character types
 
 Lowercase
  Uppercase

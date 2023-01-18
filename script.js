@@ -94,9 +94,7 @@ var Result=[];
 function getPasswordOptions() {
 
   var passwordLength = prompt("How many characters would you like in the password?");
-  if(passwordLength < 8 && passwordLength > 64) {
-    return "Invalid Password length"
-  }else{
+  
   var upperCase = confirm("Are Uppercase letters allowed?");
   var lowerCase = confirm("Are Lowercase letters allowed?");
   var Numeric = confirm("Are Numeric characters allowed?");
@@ -124,7 +122,7 @@ function getPasswordOptions() {
 return dataUser;
 
 
-}
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
