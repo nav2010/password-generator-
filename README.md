@@ -20,5 +20,6 @@ Special characters ($@%&*, etc)
  
   https://nav2010.github.io/password-generator-/
 
+## Screen of deployed application
  ![App Screenshots of Deployed Application](/images/empty.png)
   ![App Screenshots of Deployed Application](/images/after.png)
