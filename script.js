@@ -87,8 +87,6 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
-var posCar=[];  // empty array for poss ca
-var Result=[];
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -125,27 +123,24 @@ function getPasswordOptions() {
   }
 
 return dataUser;
-
 }
-
 // Function for getting a random element from an array
 function getRandom(arr) {
-
    // accepts an array as input
   // how can we generate random numbers and use them to grab content from the arrays ?
   //  where should this function be called within the file?
   var randomIndex = Math.floor(Math.random() * arr.length);
   var randomCharacter = arr[randomIndex];
   return randomCharacter;
-
 }
 
 // Function to generate password with user input
 function generatePassword() {
 
-  
+  var passwordOptions=getPasswordOptions(); 
+   var posCar=[];  // empty array for poss ca
+   var Result=[];
 
-  var passwordOptions=getPasswordOptions();
  //console.log(passwordOptions);
  if(passwordOptions.lowerCase){
      posCar=posCar.concat(lowerCasedCharacters);
@@ -165,28 +160,19 @@ for (let index = 0; index < passwordOptions.passwordLength; index++) {
   var charactor = getRandom(posCar);
  Result.push(charactor);
   console.log(charactor);
-
 }
 return Result.join("");
-
-
 }
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
+//var textbox = document.textContent("")
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
-
-  
-
-
   passwordText.value = password;
-  
-
-  
 }
 
 // Add event listener to generate button
