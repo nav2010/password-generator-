@@ -95,23 +95,19 @@ function getPasswordOptions() {
   if(passwordLength < 8 || passwordLength > 65) {
 
     alert("make the password between 10 and 65 characters");
+    return
     
-  }else{
+  }
     
   var upperCase = confirm("Are Uppercase letters allowed?");
   var lowerCase = confirm("Are Lowercase letters allowed?");
   var Numeric = confirm("Are Numeric characters allowed?");
   var special = confirm("Are special characters allowed?");
-   /*Other Requirements:
-    - code should validate for each input: 
-        - Many times users will try to input incorrect input to try and break the app. What if a user inserts 
-          a letter instead of a number when we ask for password length? How can we check to see that the correct 
-          data type (a number) was inserted? 
-      
-
-      - What can we use to display a message to the user in the browser if they input incorrect content ? 
-  */
-  }
+  if(upperCase === false && lowerCase === false  && Numeric   === false && special  === false ) {
+    alert("please one  of those")
+    return
+    }
+   
   //  where should this function be called within the file?
   var dataUser = {
     passwordLength:passwordLength,
@@ -121,7 +117,7 @@ function getPasswordOptions() {
     special:special
 
   }
-
+  
 return dataUser;
 }
 // Function for getting a random element from an array
