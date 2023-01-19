@@ -94,7 +94,12 @@ var Result=[];
 function getPasswordOptions() {
 
   var passwordLength = prompt("How many characters would you like in the password?");
-  
+  if(passwordLength < 8 || passwordLength > 65) {
+
+    alert("make the password between 10 and 65 characters");
+    
+  }else{
+    
   var upperCase = confirm("Are Uppercase letters allowed?");
   var lowerCase = confirm("Are Lowercase letters allowed?");
   var Numeric = confirm("Are Numeric characters allowed?");
@@ -121,8 +126,7 @@ function getPasswordOptions() {
 
 return dataUser;
 
-
-
+}
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -139,10 +143,7 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
 
-  //passwordLength 10 < 64
-  //lowercase, uppercase, special char,number
-  //validate input charactor between 10 and 64 one charactor type is bring selected
-  // display generate password on display
+  
 
   var passwordOptions=getPasswordOptions();
  //console.log(passwordOptions);
@@ -179,7 +180,13 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
+  
+
+
   passwordText.value = password;
+  
+
+  
 }
 
 // Add event listener to generate button
